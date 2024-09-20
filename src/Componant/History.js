@@ -55,7 +55,6 @@ class History extends Component {
                   <td> Payment Method</td>
                   <td>Amount</td>
                   <td>Quantity</td>
-                  <td>User Id</td>
                   <td>Purchased Date</td>
                 </tr>
               </thead>
@@ -70,8 +69,6 @@ class History extends Component {
                     <td>{orders.payment}</td>
                     <td>{orders.amount}</td>
                     <td>{orders.quantity}</td>
-                    {adminId ? <td>{adminId}</td> : <td>{userId}</td>}
-
                     <td>{orders.date}</td>
                   </tr>
                 ))}
