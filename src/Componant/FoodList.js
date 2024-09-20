@@ -31,7 +31,10 @@ const FoodList = () => {
     }, []); 
 
     const addToCart = (foodItemId) => {
-        if (userId) {
+        if (sellerId) {
+            alert('Only User have the permission');
+        }
+        else if (userId) {
             CartService.addToCart(userId, foodItemId, 1)
                 .then(() => {
                     alert("Item Added Successfully")
